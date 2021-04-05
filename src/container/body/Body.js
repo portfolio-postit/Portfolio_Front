@@ -2,13 +2,13 @@ import styled from "styled-components";
 // import mainPostit from '../../../public/
 
 const Box = styled.div`
-display:grid;
-  justify-content: center;
-background:#A6D5FF;
-height:calc(100% - 40px);
-border: 10px solid #1A0C0C;
-border-top:none;
-grid-template-columns: 1fr 3fr;
+    display:grid;
+    justify-content: center;
+    background:#A6D5FF;
+    height:calc(100% - 40px);
+    border: 10px solid #1A0C0C;
+    border-top:none;
+    grid-template-columns: 1fr 3fr;
 `
 const LeftBox = styled.div`
     display:grid;
@@ -30,7 +30,7 @@ const Postit = styled.div`
     border-bottom-right-radius:100px;   
 `
 const MainPostit = styled.div`
-    margin-top:80px;
+    margin-top:100px;
     position: absolute;
     left: 33%;
   	transform: rotate( 5deg );
@@ -61,20 +61,17 @@ const ProjectPostit = styled.div`
     background:bl;
 `
 const GarabgPostit = styled.div`
-    margin-left:70px;
     display:flex;
     height:200px;
     width:200px;
     background:black;
+    margin-top:70px;
+    margin-left:70px; 
+    :nth-child(3){
     margin-top:50px;
-`
-const GarabgPostit2 = styled.div`
-    margin-top:30px;
     margin-left:200px;
-    display:flex;
     height:170px;
-    width:200px;
-    background:black;
+}
 `
 const BluePostit1 = styled.div`
     height:150px;
@@ -140,14 +137,12 @@ const Body = () => {
                         <p> Ahn : 안영준</p>
                     </MainPostit>
                     <GarabgPostit />
-                    <GarabgPostit2 />
-                    <BluePostit1 />
+                    <GarabgPostit />
+                    {/* <BluePostit1 />
                     <BluePostit2 />
                     <BluePostit3 />
-                    <BluePostit4 />
-                    <AboutPost>
-
-                    </AboutPost>
+                    <BluePostit4 /> */}
+                    {/* <AboutPost/> */}
                 </RightBox>
             </Box>
         </>
