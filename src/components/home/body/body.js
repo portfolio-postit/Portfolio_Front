@@ -49,11 +49,13 @@ const RightBox = styled.div`
     `
 const MainPostit = styled.div`
     margin-top:4%;
+    margin-left:-7%;
     position: absolute;
     left: 33%;
   	transform: rotate( 5deg );
-    height:calc(30.5vw);
-    width:36%;
+    height:calc(36.5vw);
+    width:45%;
+    
     display:flex;
     flex-direction:column;
     background-size:contain;
@@ -61,10 +63,9 @@ const MainPostit = styled.div`
     background-image: url("mainPostit.png");
     align-items:center;
     justify-content:center;
-    font-size:3.5rem;
     p{
         width: 60%;
-        font-size: calc(3.5vw);
+        font-size: calc(4.7vw);
     }
     p:last-child{
         text-decoration: underline;
