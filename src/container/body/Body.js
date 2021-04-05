@@ -18,19 +18,8 @@ const RightBox = styled.div`
     display:flex;
     background:seashell;
 `
-const Postit = styled.div`
-    display:block;
-    height:400px;
-    width:500px;
-    background:#FFDC00;
-    grid-column-start: 2;
-	grid-column-end: 3;
-    grid-row-start:2;
-    grid-row-end:3;
-    border-bottom-right-radius:100px;   
-`
 const MainPostit = styled.div`
-    margin-top:100px;
+    margin-top:80px;
     position: absolute;
     left: 33%;
   	transform: rotate( 5deg );
@@ -65,49 +54,34 @@ const GarabgPostit = styled.div`
     height:200px;
     width:200px;
     background:black;
-    margin-top:70px;
-    margin-left:70px; 
-    :nth-child(3){
     margin-top:50px;
+    margin-left:70px; 
+    &:nth-child(3){
+    margin-top:30px;
     margin-left:200px;
-    height:170px;
+    height:170px; 
 }
 `
-const BluePostit1 = styled.div`
+
+const SKillPostit = styled.div`
     height:150px;
     width:150px;
     display:flex;
     margin-left:50px;
-    margin-top:70px;
+    margin-top:50px;
     background:blue;
-`
-const BluePostit2 = styled.div`
-    height:150px;
-    width:150px;
-    display:flex;
+    &:nth-child(5){
     margin-left:10px;
-    font-weight:200px;
-    margin-top:200px;
-    background:blue;
-`
-const BluePostit3 = styled.div`
-    height:150px;
-    width:150px;
-    display:block;
+    margin-top:180px;
+    }
+    &:nth-child(6){
     margin-left:-410px;
-    margin-top:250px;
-    background:blue;
-`
-const BluePostit4 = styled.div`
-    height:150px;
-    width:150px;
-    display:block;
+    margin-top:230px;
+    }
+    &:nth-child(7){
     margin-left:40px;
-    font-weight:200px;
-    margin-top:380px;
-      margin-left:-410px;
-    margin-top:250px;
-    background:blue;
+    margin-top:360px;
+    }
 `
 
 const AboutPost = styled.div`
@@ -116,13 +90,9 @@ const AboutPost = styled.div`
     display:block;
     background:black;
     margin-top:450px;
+    margin-left:-450px;
 `
 
-const BluePost = styled.div`
-    div:nth-child(1){
-
-    }
-`
 const Body = () => {
     return (
         <>
@@ -138,11 +108,11 @@ const Body = () => {
                     </MainPostit>
                     <GarabgPostit />
                     <GarabgPostit />
-                    {/* <BluePostit1 />
-                    <BluePostit2 />
-                    <BluePostit3 />
-                    <BluePostit4 /> */}
-                    {/* <AboutPost/> */}
+                    <SKillPostit />
+                    <SKillPostit />
+                    <SKillPostit />
+                    <SKillPostit />
+                    <AboutPost />
                 </RightBox>
             </Box>
         </>
