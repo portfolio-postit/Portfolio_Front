@@ -34,7 +34,7 @@ const Header = () => {
         <Box>
             <Title>
                 YeoungJun Ahn : 안영준
-                            </Title>
+            </Title>
             <Button>
                 HOME
             </Button>
