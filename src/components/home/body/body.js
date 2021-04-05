@@ -20,8 +20,8 @@ const LeftBox = styled.div`
     width:100%;
     background:red;
     @media only screen and (max-width: 768px) {
-    
     display:flex;
+    height:0;
     flex-direction: column
   }
 `
@@ -39,7 +39,7 @@ const MainPostit = styled.div`
     position: absolute;
     left: 33%;
   	transform: rotate( 5deg );
-    height:62%;
+    height:calc(30.5vw);
     width:36%;
 
     display:flex;
@@ -52,7 +52,7 @@ const MainPostit = styled.div`
     font-size:3.5rem;
     p{
         width: 60%;
-        
+        font-size: calc(3.5vw);
     }
     p:last-child{
         text-decoration: underline;
@@ -60,9 +60,8 @@ const MainPostit = styled.div`
     }
     @media only screen and (max-width: 768px) {
     margin-left:0;
-    left:20%;
-    height:100%;
-    width:57%;
+
+    width:55%;
     }
     `
 
@@ -71,6 +70,7 @@ const Body = () => {
         <>
             <Box>
                 <LeftBox>
+
                 </LeftBox>
                 <RightBox>
                     <MainPostit>
