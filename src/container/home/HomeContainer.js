@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../header/Header.js';
-import Body from '../body/Body.js'
+import HeaderContainer from '../header/headerContainer.js';
+import BodyContainer from './body/bodyContainer.js';
 
 const HomeContainer = () => {
     return (
         <>
-            <Header />
-            <Body />
+            <HeaderContainer />
+            <BodyContainer />
         </>
 
     )
