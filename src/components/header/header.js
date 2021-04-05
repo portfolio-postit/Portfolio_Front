@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 const Box = styled.div`
-    height:7%;
+    height:40px;
     width:100%;
     background: #1A0C0C;
     display:flex;
@@ -46,6 +46,7 @@ const Title = styled.div`
     height:50px;
     margin-left:0;
     padding:unset;
+
   }
 `
 const Header = () => {

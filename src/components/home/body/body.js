@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Box = styled.div`
-    height:93%;
+    height:calc(100%);
     width:calc(100% - 20px);
     display:grid;
     background:#A6D5FF;
@@ -20,14 +20,13 @@ const LeftBox = styled.div`
     width:100%;
     background:red;
     @media only screen and (max-width: 768px) {
-    
     display:flex;
     flex-direction: column
   }
 `
 const RightBox = styled.div`
     display:grid;
-    height:100%;
+    height:100%;  
     width:100%;
      @media only screen and (max-width: 768px) {
     display:flex;
@@ -39,8 +38,8 @@ const MainPostit = styled.div`
     position: absolute;
     left: 33%;
   	transform: rotate( 5deg );
-    height:62%;
-    width:36%;
+    height:32rem;
+    width:40rem;
 
     display:flex;
     flex-direction:column;
@@ -49,9 +48,9 @@ const MainPostit = styled.div`
     background-image: url("mainPostit.png");
     align-items:center;
     justify-content:center;
-    font-size:3.5rem;
+    font-size: 50px;
     p{
-        width: 60%;
+        /* width: 60%; */
         
     }
     p:last-child{
