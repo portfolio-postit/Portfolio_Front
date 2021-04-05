@@ -148,7 +148,15 @@ const SKillPostit = styled.div`
     margin-top:30%;
     }
 `
-
+const AboutPost = styled.div`
+    height:17vw;
+    width:30%;;
+    display:block;
+    margin-top:35%;
+    margin-left:-50%;
+    background-size:cover;
+    background-image: url("aboutPostit.png");
+`
 const Body = () => {
     return (
         <>
@@ -169,6 +177,7 @@ const Body = () => {
                     <SKillPostit />
                     <SKillPostit />
                     <SKillPostit />
+                    <AboutPost/>
                     <div class="ProjectPostit" />
 
                 </RightBox>
