@@ -127,6 +127,28 @@ const SubPostit = styled.div`
     margin-left:13%;
 }
 `
+const SKillPostit = styled.div`
+    height:10vw;
+    width:13%;
+    display:flex;
+    margin-left:5%;
+    margin-top:5%;
+    background-size:cover;
+    background-image: url("skillPostit.png"); 
+    &:nth-child(5){
+    margin-left:2%;
+    margin-top:13%;
+    }
+    &:nth-child(6){
+    margin-left:-30%;
+    margin-top:20%;
+    }
+    &:nth-child(7){
+    margin-left:4%;
+    margin-top:30%;
+    }
+`
+
 const Body = () => {
     return (
         <>
@@ -143,7 +165,10 @@ const Body = () => {
                     </MainPostit>
                     <SubPostit/>    
                     <SubPostit/>
-
+                    <SKillPostit />
+                    <SKillPostit />
+                    <SKillPostit />
+                    <SKillPostit />
                     <div class="ProjectPostit" />
 
                 </RightBox>
