@@ -2,35 +2,53 @@ import styled from "styled-components";
 
 
 const Box = styled.div`
-    height:40px;
+    height:7%;
     width:100%;
     background: #1A0C0C;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr 1fr 5fr;
-`
+    display:flex;
+    @media only screen and (max-width: 768px) {
+    height:80px;
+    display:inline;
+    }
+    `
 const Button = styled.button`
+    margin-left:3rem;   
     color:white;
     border:none;
     outline:none;
     background:transparent;
     font-weight: bold;
-&:hover{
+    font-size:1rem;
+    &:hover{
     color:#B6B6B6;
-}
+    }
+    @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left:0;
+    outline:none;
+    border:none;
+    padding-bottom:unset;
+    }
 `
 
 const Title = styled.div`
+    margin-left:4rem;
+    font-size:1rem;
     display:flex;
     justify-content:center;
     align-items:center;
     color:white;
     font-weight: bold;
     font-style: italic;
+    background: #1A0C0C;
+    @media only screen and (max-width: 768px) {
+    width: 100%;
+    height:50px;
+    margin-left:0;
+    padding:unset;
+  }
 `
 const Header = () => {
-
-
-
     return (
         <Box>
             <Title>
