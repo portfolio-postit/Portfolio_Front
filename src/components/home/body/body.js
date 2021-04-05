@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Box = styled.div`
+    width:100%;
     display:grid;
     justify-content: center;
     background:#A6D5FF;
@@ -13,6 +14,7 @@ const Box = styled.div`
 `
 const LeftBox = styled.div`
     display:grid;
+    
 `
 const RightBox = styled.div`
     display:flex;
@@ -24,13 +26,14 @@ const MainPostit = styled.div`
     left: 33%;
   	transform: rotate( 5deg );
     height:32rem;
-    width:40rem;
+    width:42%;
     justify-content:center;
     align-items:center;
     line-height:center;
     display:flex;
     flex-direction:column;
-    background-size:cover;
+    background-size:contain;
+    background-repeat:no-repeat;
     background-image: url("mainPostit.png");
     font-weight: bold;
     font-style: italic;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Box = styled.div`
     height:40px;
+    width:100%;
     background: #1A0C0C;
     display:grid;
     grid-template-columns:2fr 1fr 1fr 1fr 1fr 5fr;
