@@ -9,7 +9,7 @@ const Box = styled.div`
     border-right: 10px solid #1A0C0C;
     grid-template-columns: 1fr 3fr;
     @media only screen and (max-width: 768px) {
-    height:500%;
+    height:calc(70% + 40vw);
     display:flex;
     flex-direction: column
   }
@@ -35,7 +35,7 @@ const RightBox = styled.div`
         margin-top:calc(40.5vw);
         margin-left:3rem;
         position: absolute;
-        left:22%;
+        left:26%;
         display:flex;
         height:calc(65vw);
         width:40%;
@@ -55,7 +55,8 @@ const MainPostit = styled.div`
   	transform: rotate( 5deg );
     height:calc(36.5vw);
     width:45%;
-    
+    font-style:italic;
+    font-weight: 700;
     display:flex;
     flex-direction:column;
     background-size:contain;
@@ -64,7 +65,7 @@ const MainPostit = styled.div`
     align-items:center;
     justify-content:center;
     p{
-        width: 60%;
+        width: 65%;
         font-size: calc(4.7vw);
     }
     p:last-child{
@@ -73,7 +74,6 @@ const MainPostit = styled.div`
     }
     @media only screen and (max-width: 768px) {
     margin-left:0;
-
     width:55%;
     }
     `
@@ -88,10 +88,10 @@ const ProjectPostit = styled.div`
 `
 
 const GarabagePostit = styled.div`
-  	transform: rotate( 5deg );
+    color:#3F3D3D;
+  	transform: rotate( 6deg );
     justify-content:center;
     align-items:center;
-    line-height:center;
     margin-top:2%;
     height:calc(7vw);
     width:66%;
@@ -102,17 +102,28 @@ const GarabagePostit = styled.div`
     margin-left:20%;
     
     p{
-        margin-top:1rem;
+    font-size: calc(1.1vw - 0.1rem);
+        margin-top:10%;
+        margin-left:20%;
         transform: rotate( 5deg );
-        width: 47%;
-        font-size:0.9rem;
+        width: 70%;
     }
-    p:after {
+    p:after {   
         content: "";
         display: block;
-        width: 7rem;
+        width: 9vw;
         border-bottom: 1px solid #707070;
-        margin: 10px auto;
+        margin: 0.5vw auto;
+        margin-left:-0.2vw;    
+}
+@media only screen and (max-width: 768px) {
+    height:0;
+    p{
+        font-size:0;
+    }
+    p:after {   
+        width:0;   
+    }
 }
 `
 const SubPostit = styled.div`
@@ -123,13 +134,25 @@ const SubPostit = styled.div`
     background-image: url("subPostit.png");
     margin-top:2%;
     margin-left:4%;; 
+    flex-direction:column;
+    align-items:center; 
+    line-height: -10%;
+    font-size:1.4vw;
     &:nth-child(3){
     margin-top:3%;
     margin-left:13%;
+    }
+    p{
+        color:#3F3D3D;
+        margin-top:10px;
+        margin-left:1vw;
+    }
+    @media only screen and (max-width: 768px) {
+    height:0;
 }
 `
 const SKillPostit = styled.div`
-    height:10vw;
+    height:9.9vw;
     width:13%;
     display:flex;
     margin-left:5%;
@@ -138,15 +161,24 @@ const SKillPostit = styled.div`
     background-image: url("skillPostit.png"); 
     &:nth-child(5){
     margin-left:2%;
-    margin-top:13%;
+    margin-top:calc(10% + 1vw);
     }
     &:nth-child(6){
     margin-left:-30%;
     margin-top:20%;
+    @media only screen and (max-width: 768px) {
+    margin-top:calc(1vw);
+    }
     }
     &:nth-child(7){
     margin-left:4%;
     margin-top:30%;
+    @media only screen and (max-width: 768px) {
+    margin-top:calc(1vw);
+    }
+    }
+    @media only screen and (max-width: 768px) {
+        height:13.1vw;
     }
 `
 const AboutPost = styled.div`
@@ -154,16 +186,23 @@ const AboutPost = styled.div`
     width:30%;;
     display:block;
     margin-top:35%;
-    margin-left:-50%;
+    margin-left:-43%;
     background-size:cover;
     background-image: url("aboutPostit.png");
+    @media only screen and (max-width: 768px) {
+    margin-top:calc(5.5vw);
+    margin-left:0;
+    height:23vw;
+    }
 `
 const Body = () => {
     return (
         <>
             <Box>
                 <LeftBox>
-                    <GarabagePostit />
+                    <GarabagePostit>
+                        <p>useless thoughts</p>
+                        </GarabagePostit>
                     <ProjectPostit />
                 </LeftBox>
                 <RightBox>
@@ -172,14 +211,14 @@ const Body = () => {
                         <p> YeoungJun</p>
                         <p> Ahn : 안영준</p>
                     </MainPostit>
-                    <SubPostit/>    
-                    <SubPostit/>
+                    <SubPostit><p>click on postit</p></SubPostit>    
+                    <SubPostit><p>sense of responsibility</p></SubPostit>
                     <SKillPostit />
                     <SKillPostit />
                     <SKillPostit />
                     <SKillPostit />
                     <AboutPost/>
-                    <div class="ProjectPostit" />
+                    <div class="ProjectPostit"/>
 
                 </RightBox>
             </Box>
