@@ -9,7 +9,7 @@ const Box = styled.div`
     border-right: 10px solid #1A0C0C;
     grid-template-columns: 1fr 3fr;
     @media only screen and (max-width: 768px) {
-    height:calc(70% + 40vw);
+    height:calc(80% + 40vw);
     display:flex;
     flex-direction: column
   }
@@ -146,6 +146,9 @@ const SubPostit = styled.div`
         color:#3F3D3D;
         margin-top:10px;
         margin-left:1vw;
+      @media only screen and (max-width: 768px) {
+        font-size:0px;
+    }
     }
     @media only screen and (max-width: 768px) {
     height:0;
