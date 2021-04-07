@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Routing from "./Routing";
 import { BrowserRouter as Router } from "react-router-dom";
 import { GlobalStyle } from "./GlobalStyle";
