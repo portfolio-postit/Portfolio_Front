@@ -116,14 +116,14 @@ const GarabagePostit = styled.div`
         margin: 0.5vw auto;
         margin-left:-0.2vw;    
 }
-@media only screen and (max-width: 768px) {
-    height:0;
-    p{
-        font-size:0;
-    }
-    p:after {   
-        width:0;   
-    }
+    @media only screen and (max-width: 768px) {
+        height:0;
+        p{
+            font-size:0;
+        }
+        p:after {   
+            width:0;   
+        }
 }
 `
 const SubPostit = styled.div`
@@ -138,23 +138,29 @@ const SubPostit = styled.div`
     align-items:center; 
     line-height: -10%;
     font-size:1.4vw;
+   
     &:nth-child(3){
-    margin-top:3%;
-    margin-left:13%;
+        margin-top:3%;
+        margin-left:13%;
     }
+    
     p{
         color:#3F3D3D;
         margin-top:10px;
         margin-left:1vw;
-      @media only screen and (max-width: 768px) {
-        font-size:0px;
+    
+        @media only screen and (max-width: 768px) {
+            font-size:0px;
+        }
     }
-    }
+    
     @media only screen and (max-width: 768px) {
     height:0;
 }
 `
 const SKillPostit = styled.div`
+    display:flex;
+    flex-direction:column;
     height:9.9vw;
     width:13%;
     display:flex;
@@ -165,12 +171,17 @@ const SKillPostit = styled.div`
     &:nth-child(5){
     margin-left:2%;
     margin-top:calc(10% + 1vw);
+     @media only screen and (max-width: 768px) {
+    margin-top:calc(1vw);
+    margin-left:0;
+    }
     }
     &:nth-child(6){
     margin-left:-30%;
     margin-top:20%;
     @media only screen and (max-width: 768px) {
     margin-top:calc(1vw);
+    margin-left:0;
     }
     }
     &:nth-child(7){
@@ -181,7 +192,30 @@ const SKillPostit = styled.div`
     }
     }
     @media only screen and (max-width: 768px) {
-        height:13.1vw;
+        height:15vw;
+        width:15%;
+    }
+    .size{
+        height:40%;
+        width:40%;
+    }
+    p{
+        font-size:calc(1vw);
+        font-weight:500;
+        margin-left:23%;
+        margin-top:7%;
+      @media only screen and (max-width: 768px) {
+        margin-left:20%;
+        font-size:calc(1.8vw);
+    }
+    }
+    .margin1{
+        margin-top:7%;
+        margin-left:15%;
+    }
+    .margin2{
+        margin-top:-7%;
+        margin-left:45%;
     }
 `
 const AboutPost = styled.div`
@@ -205,7 +239,7 @@ const Body = () => {
                 <LeftBox>
                     <GarabagePostit>
                         <p>useless thoughts</p>
-                        </GarabagePostit>
+                    </GarabagePostit>
                     <ProjectPostit />
                 </LeftBox>
                 <RightBox>
@@ -214,12 +248,32 @@ const Body = () => {
                         <p> YeoungJun</p>
                         <p> Ahn : 안영준</p>
                     </MainPostit>
-                    <SubPostit><p>click on postit</p></SubPostit>    
-                    <SubPostit><p>sense of responsibility</p></SubPostit>
-                    <SKillPostit />
-                    <SKillPostit />
-                    <SKillPostit />
-                    <SKillPostit />
+                    <SubPostit>
+                        <p>click on postit</p>
+                    </SubPostit>    
+                    <SubPostit>
+                        <p>sense of responsibility</p>
+                    </SubPostit>
+                    <SKillPostit> 
+                        <p>FrameWork</p>
+                        <img src="react.png" class="size margin1"/>
+                        <img src="springboot.png" class="margin2" height="40%" width="45%"/>
+                    </SKillPostit>
+                    <SKillPostit>
+                        <p>FrameWork</p>
+                        <img src="react.png" class="size margin1"/>
+                        <img src="springboot.png" class="margin2" height="40%" width="45%"/>
+                    </SKillPostit>
+                    <SKillPostit>
+                        <p>FrameWork</p>
+                        <img src="react.png" class="size margin1"/>
+                        <img src="springboot.png" class="margin2" height="40%" width="45%"/>
+                    </SKillPostit>
+                    <SKillPostit>
+                        <p>FrameWork</p>
+                        <img src="react.png" class="size margin1"/>
+                        <img src="springboot.png" class="margin2" height="40%" width="45%"/>
+                    </SKillPostit>
                     <AboutPost/>
                     <div class="ProjectPostit"/>
 
