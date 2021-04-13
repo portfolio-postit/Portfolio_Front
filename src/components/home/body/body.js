@@ -5,6 +5,8 @@ import { getMainSaga } from "../../../modules/redux/main";
 import GarabagePostit from "../postit/garbagePostit/garabagePostit";
 import MainPostit from "../postit/mainPostit/mainPostit";
 import SubPostit from "../postit/subPostit/subPostit";
+import SkillPostit from "../postit/skillPostit/skillPostit";
+
 const Body = () => {
   const email = useSelector((state) => state.main.main?.about?.email);
   const name = useSelector((state) => state.main.main?.about?.username);
@@ -36,58 +38,7 @@ const Body = () => {
         <S.RightBox>
           <MainPostit name={name} />
           <SubPostit />
-          <S.SKillPostit>
-            <p>Tool</p>
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="size margin1"
-            />
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="margin2"
-              height="40%"
-              width="45%"
-            />
-          </S.SKillPostit>
-          <S.SKillPostit>
-            <p>FrameWork</p>
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="size margin1"
-            />
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="margin2"
-              height="40%"
-              width="45%"
-            />
-          </S.SKillPostit>
-          <S.SKillPostit>
-            <p>FrameWork</p>
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="size margin1"
-            />
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="margin2"
-              height="40%"
-              width="45%"
-            />
-          </S.SKillPostit>
-          <S.SKillPostit>
-            <p>FrameWork</p>
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="size margin1"
-            />
-            <img
-              src={process.env.REACT_APP_S3_URL + tool1.file_name}
-              class="margin2"
-              height="40%"
-              width="45%"
-            />
-          </S.SKillPostit>
+          <SkillPostit url={process.env.REACT_APP_S3_URL + tool1.file_name} />
           <S.AboutPost>
             <S.AboutTitle>ABOUT</S.AboutTitle>
             <S.AboutComment>{phone_number}</S.AboutComment>
