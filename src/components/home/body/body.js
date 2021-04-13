@@ -6,7 +6,7 @@ import GarabagePostit from "../postit/garbagePostit/garabagePostit";
 import MainPostit from "../postit/mainPostit/mainPostit";
 import SubPostit from "../postit/subPostit/subPostit";
 import SkillPostit from "../postit/skillPostit/skillPostit";
-
+import AboutPost from "../postit/aboutPostit/aboutPostit";
 const Body = () => {
   const email = useSelector((state) => state.main.main?.about?.email);
   const name = useSelector((state) => state.main.main?.about?.username);
@@ -39,11 +39,7 @@ const Body = () => {
           <MainPostit name={name} />
           <SubPostit />
           <SkillPostit url={process.env.REACT_APP_S3_URL + tool1.file_name} />
-          <S.AboutPost>
-            <S.AboutTitle>ABOUT</S.AboutTitle>
-            <S.AboutComment>{phone_number}</S.AboutComment>
-            <S.AboutComment>{email}</S.AboutComment>
-          </S.AboutPost>
+          <AboutPost email={email} phone_number={phone_number} />
           <div class="ProjectPostit"> </div>
         </S.RightBox>
       </S.Box>
