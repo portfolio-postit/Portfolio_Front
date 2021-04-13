@@ -18,17 +18,19 @@ const Body = () => {
   // );
   // console.log(res.status);
 
-  // const email = useSelector((state) => state.main.main.about);
   const email = useSelector((state) => state.main.main?.about?.email);
   const name = useSelector((state) => state.main.main?.about?.username);
-  // const [tool, tool2] = useSelector((state) => state.main.main?.tool);
-  const tool = useSelector((state) => state.main.main?.tool);
-  const dispatch = useDispatch();
+  const git_url = useSelector((state) => state.main.main?.about?.git_url);
+  const phone_number = useSelector(
+    (state) => state.main.main?.about?.phone_number
+  );
 
+  const tool = useSelector((state) => state.main.main?.tool);
   const [tool1, tool2] = tool || ["", ""];
 
-  const tool12 = process.env.REACT_APP_S3_URL + tool1.file_name;
-  console.log(tool12);
+  console.log(email);
+  const dispatch = useDispatch();
+
   const initMainSaga = useCallback(() => {
     dispatch(getMainSaga());
   }, [dispatch]);
@@ -49,7 +51,7 @@ const Body = () => {
           <S.MainPostit>
             <p> HI I'm</p>
             <p> YeoungJun</p>
-            <p>{name || "SEX"}</p>
+            <p>{"Ahn: " + name || "안영준"}</p>
           </S.MainPostit>
           <S.SubPostit>
             <p>click on postit</p>
@@ -59,9 +61,12 @@ const Body = () => {
           </S.SubPostit>
           <S.SKillPostit>
             <p>Tool</p>
-            <img src={tool12} class="size margin1" />
             <img
-              src="springboot.png"
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
+              class="size margin1"
+            />
+            <img
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
               class="margin2"
               height="40%"
               width="45%"
@@ -69,9 +74,12 @@ const Body = () => {
           </S.SKillPostit>
           <S.SKillPostit>
             <p>FrameWork</p>
-            <img src="react.png" class="size margin1" />
             <img
-              src="springboot.png"
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
+              class="size margin1"
+            />
+            <img
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
               class="margin2"
               height="40%"
               width="45%"
@@ -79,9 +87,12 @@ const Body = () => {
           </S.SKillPostit>
           <S.SKillPostit>
             <p>FrameWork</p>
-            <img src="react.png" class="size margin1" />
             <img
-              src="springboot.png"
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
+              class="size margin1"
+            />
+            <img
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
               class="margin2"
               height="40%"
               width="45%"
@@ -89,9 +100,12 @@ const Body = () => {
           </S.SKillPostit>
           <S.SKillPostit>
             <p>FrameWork</p>
-            <img src="react.png" class="size margin1" />
             <img
-              src="springboot.png"
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
+              class="size margin1"
+            />
+            <img
+              src={process.env.REACT_APP_S3_URL + tool1.file_name}
               class="margin2"
               height="40%"
               width="45%"
@@ -99,8 +113,8 @@ const Body = () => {
           </S.SKillPostit>
           <S.AboutPost>
             <S.AboutTitle>ABOUT</S.AboutTitle>
-            <S.AboutComment>010-7670-3833</S.AboutComment>
-            <S.AboutComment>ahn479512@gmail.com</S.AboutComment>
+            <S.AboutComment>{phone_number}</S.AboutComment>
+            <S.AboutComment>{email}</S.AboutComment>
           </S.AboutPost>
           <div class="ProjectPostit"> </div>
         </S.RightBox>

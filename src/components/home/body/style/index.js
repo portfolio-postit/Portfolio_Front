@@ -75,6 +75,7 @@ export const MainPostit = styled.div`
   p {
     width: 65%;
     font-size: calc(4.7vw);
+    margin-bottom: 1.5%;
   }
   p:last-child {
     text-decoration: underline;

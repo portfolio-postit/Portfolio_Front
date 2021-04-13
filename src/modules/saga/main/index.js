@@ -5,7 +5,7 @@ import { GET_MAIN, setMain } from "../../redux/main/index";
 
 function* getMainSaga() {
   try {
-    const REQUEST_URL = MAIN.GET_MAIN("aa2324dssss");
+    const REQUEST_URL = MAIN.GET_MAIN("ahn479512@gmail.com");
 
     const res = yield call(requestGetApi, REQUEST_URL);
 
