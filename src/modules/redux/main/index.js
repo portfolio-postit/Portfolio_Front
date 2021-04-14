@@ -18,7 +18,6 @@ const initialState = {
 const MainReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_MAIN: {
-      console.log(action);
       return {
         ...state,
         main: action.payload,
