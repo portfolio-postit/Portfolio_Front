@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const SKillPostit = styled.div`
   display: flex;
   flex-direction: column;
-  height: 9.9vw;
-  width: 13%;
+  height: 10.7vw;
+  width: 14%;
   display: flex;
   margin-left: 5%;
   margin-top: 5%;
@@ -27,8 +27,8 @@ export const SKillPostit = styled.div`
     }
   }
   &:nth-child(7) {
-    margin-left: 4%;
-    margin-top: 30%;
+    margin-left: 3%;
+    margin-top: 28%;
     @media only screen and (max-width: 768px) {
       margin-top: calc(1vw);
     }
@@ -44,10 +44,14 @@ export const SKillPostit = styled.div`
   p {
     font-size: calc(1vw);
     font-weight: 500;
-    margin-left: 23%;
+    margin-left: calc(2vw);
     margin-top: 7%;
+    &.margin40 {
+      margin-left: 40%;
+    }
+
     @media only screen and (max-width: 768px) {
-      margin-left: 20%;
+      margin-left: 10%;
       font-size: calc(1.8vw);
     }
   }
