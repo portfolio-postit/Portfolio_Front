@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Route, Link } from "react-router-dom";
 
 const Box = styled.div`
   height: 7%;
@@ -10,12 +11,16 @@ const Box = styled.div`
     display: inline;
   }
 `;
-const Button = styled.button`
+const CustomLink = styled(Link)`
+  margin-bottom: 2rem;
+  background-color: #1a0c0c;
+  display: flex;
+  margin-top: 1rem;
+  text-decoration: none;
   margin-left: 3rem;
   color: white;
   border: none;
   outline: none;
-  background: transparent;
   font-weight: bold;
   font-size: 1rem;
   &:hover {
@@ -52,10 +57,10 @@ const Header = () => {
   return (
     <Box>
       <Title>YeoungJun Ahn : 안영준</Title>
-      <Button>HOME</Button>
-      <Button>ABOUT</Button>
-      <Button>SKILL</Button>
-      <Button>PROJECT</Button>
+      <CustomLink>HOME</CustomLink>
+      <CustomLink to="/about">ABOUT</CustomLink>
+      <CustomLink>SKILL</CustomLink>
+      <CustomLink>PROJECT</CustomLink>
     </Box>
   );
 };
