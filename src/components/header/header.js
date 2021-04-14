@@ -6,13 +6,14 @@ const Box = styled.div`
   width: 100%;
   background: #1a0c0c;
   display: flex;
+  /* text-align: center; */
   @media only screen and (max-width: 768px) {
     height: 80px;
     display: inline;
   }
 `;
 const CustomLink = styled(Link)`
-  margin-bottom: 2rem;
+  margin-bottom: 1px;
   background-color: #1a0c0c;
   display: flex;
   margin-top: 1rem;
@@ -28,17 +29,36 @@ const CustomLink = styled(Link)`
     cursor: pointer;
   }
   @media only screen and (max-width: 768px) {
+    font-size: 1rem;
+    height: 20px;
+    margin-top: 1.5px;
     width: 100%;
     margin-left: 0;
     outline: none;
     border: none;
+    padding-left: 46%;
     padding-bottom: unset;
+    padding-top: 1%;
+  }
+  &:nth-child(3) {
+    @media only screen and (max-width: 768px) {
+      padding-left: 45.5%;
+    }
+  }
+  &:nth-child(4) {
+    @media only screen and (max-width: 768px) {
+      padding-left: 46.5%;
+    }
+  }
+  &:nth-child(5) {
+    @media only screen and (max-width: 768px) {
+      padding-left: 44.7%;
+    }
   }
 `;
 
 const Title = styled.div`
   margin-left: 4rem;
-  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +67,7 @@ const Title = styled.div`
   font-style: italic;
   background: #1a0c0c;
   @media only screen and (max-width: 768px) {
+    font-size: 3.5vw;
     width: 100%;
     height: 50px;
     margin-left: 0;
