@@ -9,7 +9,7 @@ export const Box = styled.div`
   border-right: 10px solid #1a0c0c;
   grid-template-columns: 1fr 3fr;
   @media only screen and (max-width: 768px) {
-    height: calc(80% + 40vw);
+    height: calc(80% + 35vw);
     display: flex;
     flex-direction: column;
   }
@@ -49,18 +49,5 @@ export const RightBox = styled.div`
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-  }
-`;
-
-export const ProjectPostit = styled.div`
-  margin-left: 7%;
-  display: flex;
-  width: 80%;
-  height: calc(32vw);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("projectPostit.png");
-  :hover {
-    cursor: pointer;
   }
 `;
