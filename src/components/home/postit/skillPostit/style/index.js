@@ -49,7 +49,12 @@ export const SKillPostit = styled.div`
     &.margin40 {
       margin-left: 40%;
     }
-
+    &.framework {
+      margin-left: 27%;
+      @media only screen and (max-width: 768px) {
+        margin-left: 20%;
+      }
+    }
     @media only screen and (max-width: 768px) {
       margin-left: 10%;
       font-size: calc(1.8vw);
