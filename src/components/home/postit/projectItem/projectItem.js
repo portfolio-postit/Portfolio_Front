@@ -7,10 +7,10 @@ const projectItem = (props) => {
     <S.wrapper>
       <S.projectTitle>{props.project.project_title}</S.projectTitle>
       <S.projectTag>
-        <S.tag>{tag1.tag}</S.tag>
-        <S.tag>{tag2.tag}</S.tag>
-        <S.tag>{tag2.tag}</S.tag>
-        <S.tag>{tag2.tag}</S.tag>
+        <S.tag>안녕하세요</S.tag>
+        <S.tag>안녕하세요</S.tag>
+        <S.tag>안녕하세요</S.tag>
+        <S.tag>안녕하세요</S.tag>
       </S.projectTag>
     </S.wrapper>
   );

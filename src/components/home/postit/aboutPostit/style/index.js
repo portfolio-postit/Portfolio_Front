@@ -32,6 +32,7 @@ export const AboutTitle = styled.div`
     margin-left: -2vw;
   }
   @media only screen and (max-width: 768px) {
+    font-weight: 1000;
     font-size: calc(3vw);
   }
 `;
