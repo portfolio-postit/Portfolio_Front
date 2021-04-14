@@ -10,10 +10,10 @@ const BodyContainer = () => {
   const phone_number = useSelector(
     (state) => state.main.main?.about?.phone_number
   );
-
   const tool = useSelector((state) => state.main.main?.tool);
   const [tool1, tool2] = tool || ["", ""];
-
+  const project = useSelector((state) => state.main.main?.project);
+  const main = useSelector((state) => state.main);
   const dispatch = useDispatch();
 
   const initMainSaga = useCallback(() => {
@@ -24,7 +24,7 @@ const BodyContainer = () => {
     initMainSaga();
   }, []);
 
-  console.log(phone_number);
+  console.log(main);
   return (
     <Body
       phone_number={phone_number}
@@ -32,6 +32,8 @@ const BodyContainer = () => {
       name={name}
       email={email}
       tool1={tool1}
+      tool2={tool2}
+      project={project}
     />
   );
 };
