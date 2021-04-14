@@ -51,16 +51,3 @@ export const RightBox = styled.div`
     flex-direction: column;
   }
 `;
-
-export const ProjectPostit = styled.div`
-  margin-left: 7%;
-  display: flex;
-  width: 80%;
-  height: calc(32vw);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("projectPostit.png");
-  :hover {
-    cursor: pointer;
-  }
-`;
