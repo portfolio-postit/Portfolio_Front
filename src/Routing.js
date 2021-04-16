@@ -5,17 +5,17 @@ import HomeContainer from "./container/home/HomeContainer";
 import DesktopRouting from "./container/desktop/DesktopRouting";
 import AboutContainer from "./container/about/AboutContainer";
 import SkillContainer from "./container/skill/SkillContainer";
+import ProjectContainer from "./container/project/ProjectContainer";
 const Routing = () => {
   return (
     <>
       <Switch>
         <Route path="/" exact component={DesktopRouting} />
-        <Route path="/home" exact component={HomeContainer} />
+        <Route path="/project" component={ProjectContainer} />
+        <Route path="/home" component={HomeContainer} />
         <Route paht="/about" component={AboutContainer} />
         <Route path="/skill" component={SkillContainer} />
-        {/* <Route path="/project" component={ProjectContainer} /> */}
       </Switch>
-      {/* <ModalWrapContainer /> */}
     </>
   );
 };
