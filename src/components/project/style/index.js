@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   border-left: 10px solid #1a0c0c;
   border-right: 10px solid #1a0c0c;
+  @media only screen and (max-width: 768px) {
+    height: calc(40vw + (90vw * ${(props) => props.countProject}));
+  }
 `;
 
 export const ProjectList = styled.div`
