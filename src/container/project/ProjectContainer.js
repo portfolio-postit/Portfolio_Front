@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import HeaderContainer from "../header/headerContainer";
-
+import Project from "../../components/project/project";
 const ProjectContainer = () => {
   return (
     <>
