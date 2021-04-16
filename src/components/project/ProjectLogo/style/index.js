@@ -12,7 +12,11 @@ export const ProjectLogo = styled.div`
   font-size: 3.5vw;
   font-weight: 1000;
   display: table;
-
+  @media only screen and (max-width: 768px) {
+    height: 38vw;
+    width: 86vw;
+    font-size: 7vw;
+  }
   p {
     display: table-cell;
     text-align: center;

@@ -9,6 +9,10 @@ export const ProjectGroup = styled.div`
     width: 6.5vw;
     margin-top: 5%;
     margin-left: 10%;
+    @media only screen and (max-width: 768px) {
+      height: 20vw;
+      width: 25vw;
+    }
   }
 `;
 export const ProjectCotent = styled.div`
@@ -17,6 +21,7 @@ export const ProjectCotent = styled.div`
   flex-direction: column;
 `;
 export const ProjectItem = styled.div`
+  margin-left: 2.5vw;
   display: flex;
   height: 20vw;
   width: 22.2vw;
@@ -37,16 +42,21 @@ export const ProjectTitle = styled.div`
   width: 100%;
   margin-top: 1vw;
   text-align: center;
+
+  @media only screen and (max-width: 768px) {
+    height: 10vw;
+    font-size: 6vw;
+  }
 `;
 
 export const ProjectMember = styled.div`
   font-size: 1.2vw;
   height: 2vw;
-  width: 100%;
   margin-left: 5vw;
   @media only screen and (max-width: 768px) {
-    text-align: right;
-    margin-left: 0;
+    margin-left: 27vw;
+    height: 8vw;
+    font-size: 5vw;
   }
 `;
 
@@ -55,11 +65,22 @@ export const Progress = styled.progress`
   height: 1.3vw;
   margin-left: 3vw;
   margin-bottom: 1px;
+  @media only screen and (max-width: 768px) {
+    width: 68vw;
+    height: 5.2vw;
+    margin-left: 12vw;
+    margin-bottom: 6px;
+  }
 `;
 export const ProgressName = styled.div`
   margin-left: 3vw;
   height: 1.3vw;
   font-size: 1.1vw;
+  @media only screen and (max-width: 768px) {
+    font-size: 4.4vw;
+    height: 5.2vw;
+    margin-left: 12vw;
+  }
 `;
 export const GitURL = styled.a`
   margin-top: 1vw;
@@ -67,4 +88,8 @@ export const GitURL = styled.a`
   width: 80%;
   font-size: 1.2vw;
   margin-left: 3vw;
+  @media only screen and (max-width: 768px) {
+    font-size: 4.8vw;
+    margin-left: 12vw;
+  }
 `;

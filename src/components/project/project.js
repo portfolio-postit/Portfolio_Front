@@ -4,7 +4,7 @@ import ProjectItem from "./ProjectItem/ProjectItem";
 
 const project = () => {
   return (
-    <S.Wrapper>
+    <S.Wrapper countProject="7">
       <ProjectLogo />
       <S.ProjectList>
         <ProjectItem />
