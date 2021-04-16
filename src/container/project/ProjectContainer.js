@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import HeaderContainer from "../header/headerContainer";
 
-const AboutContainer = () => {
+const ProjectContainer = () => {
   const A = styled.div`
     width: 100%;
     height: 100%;
@@ -14,4 +14,4 @@ const AboutContainer = () => {
     </>
   );
 };
-export default AboutContainer;
+export default ProjectContainer;

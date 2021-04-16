@@ -16,7 +16,7 @@ const CustomLink = styled(Link)`
   margin-bottom: 1px;
   background-color: #1a0c0c;
   display: flex;
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   text-decoration: none;
   margin-left: 3rem;
   color: white;
@@ -78,10 +78,10 @@ const Header = () => {
   return (
     <Box>
       <Title>YeoungJun Ahn : 안영준</Title>
-      <CustomLink>HOME</CustomLink>
+      <CustomLink to="/home">HOME</CustomLink>
       <CustomLink to="/about">ABOUT</CustomLink>
-      <CustomLink>SKILL</CustomLink>
-      <CustomLink>PROJECT</CustomLink>
+      <CustomLink to="/skill">SKILL</CustomLink>
+      <CustomLink to="/project">PROJECT</CustomLink>
     </Box>
   );
 };
