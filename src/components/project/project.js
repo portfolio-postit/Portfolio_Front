@@ -19,6 +19,14 @@ const ProjectButton = styled.div`
   margin-top: 2%;
   margin-left: 5%;
   margin-bottom: 3%;
+  font-size: 3.5vw;
+  font-weight: 1000;
+  display: table;
+  p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
 `;
 
 const ProjectList = styled.div`
@@ -39,7 +47,9 @@ const ProjectItem = styled.div`
 const project = () => {
   return (
     <Wrapper>
-      <ProjectButton />
+      <ProjectButton>
+        <p>PROJECT</p>
+      </ProjectButton>
       <ProjectList>
         <ProjectItem />
         <ProjectItem />
