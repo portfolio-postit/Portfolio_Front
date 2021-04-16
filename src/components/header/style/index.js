@@ -32,7 +32,6 @@ export const CustomLink = styled(Link)`
     font-size: 1rem;
     height: 20px;
     margin-top: 1.5px;
-    width: 100%;
     margin-left: 0;
     outline: none;
     border: none;
