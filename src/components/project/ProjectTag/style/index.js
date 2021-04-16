@@ -6,7 +6,8 @@ export const ProjectTag = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    height: 2vw;
+    height: 16vw;
+    font-size: 4vw;
   }
   p {
     margin-left: 1vw;
