@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   border-right: 10px solid #1a0c0c;
 `;
 
-const ProjectButton = styled.div`
+const ProjectLogo = styled.div`
   height: 14.1vw;
   width: 32vw;
   background-image: url("projectTitle.png");
@@ -125,9 +125,9 @@ const GitURL = styled.a`
 const project = () => {
   return (
     <Wrapper>
-      <ProjectButton>
+      <ProjectLogo>
         <p>PROJECT</p>
-      </ProjectButton>
+      </ProjectLogo>
       <ProjectList>
         <ProjectItem>
           <ProjectGroup>
