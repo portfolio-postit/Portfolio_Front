@@ -30,22 +30,6 @@ export const RightBox = styled.div`
   height: 100%;
   width: 100%;
 
-  .ProjectPostit {
-    @media only screen and (max-width: 768px) {
-      margin-top: calc(40.5vw);
-      margin-left: 3rem;
-      position: absolute;
-      left: 26%;
-      display: flex;
-      height: calc(65vw);
-      width: 40%;
-      background-size: cover;
-      background-image: url("projectPostit.png");
-      :hover {
-        cursor: pointer;
-      }
-    }
-  }
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;

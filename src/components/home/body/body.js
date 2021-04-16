@@ -23,7 +23,6 @@ const Body = (props) => {
             url={process.env.REACT_APP_S3_URL + props.tool1.file_name}
           />
           <AboutPost email={props.email} phone_number={props.phone_number} />
-          {/* <div class="ProjectPostit"> </div> */}
         </S.RightBox>
       </S.Box>
     </>
