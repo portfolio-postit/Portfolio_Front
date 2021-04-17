@@ -1,9 +1,21 @@
 import * as S from "./style";
 import ProjectTag from "../ProjectTag/projectTag";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../../modules/redux/modal";
+import React, { useCallback } from "react";
+import ProjectModal from "../../modal/Modal/ProjectModal/ProjectModal";
+
 const ProjectItem = () => {
+  const dispatch = useDispatch();
+  const modalOn = useCallback(
+    (modal) => {
+      dispatch(showModal(modal));
+    },
+    [dispatch]
+  );
   return (
     <>
-      <S.ProjectItem>
+      <S.ProjectItem onClick={() => modalOn(ProjectModal)}>
         <S.ProjectGroup>
           <img src="springboot.png" />
           <S.ProjectCotent>
