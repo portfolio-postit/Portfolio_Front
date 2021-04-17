@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import * as S from "./style/styles";
+import * as S from "./style";
 import { useDispatch } from "react-redux";
 import { dropModal } from "../../../modules/redux/modal";
 
