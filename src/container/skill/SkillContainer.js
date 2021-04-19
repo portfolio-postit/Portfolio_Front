@@ -1,16 +1,10 @@
-import styled from "styled-components";
 import HeaderContainer from "../header/headerContainer";
-
+import Skill from "../../components/Skill/Skill";
 const SkillContainer = () => {
-  const A = styled.div`
-    width: 100%;
-    height: 100%;
-    background: black;
-  `;
-
   return (
     <>
       <HeaderContainer />
+      <Skill />
     </>
   );
 };
