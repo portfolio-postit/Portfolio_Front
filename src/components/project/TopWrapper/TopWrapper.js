@@ -3,7 +3,7 @@ const TopWrapper = () => {
   return (
     <S.TopWrapper>
       <S.ProjectLogo>
-        <p>ABOUT</p>
+        <p>PROJECT</p>
       </S.ProjectLogo>
       <S.HomeLogo>
         <p>HOME</p>
