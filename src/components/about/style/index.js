@@ -4,8 +4,6 @@ export const Wrapper = styled.div`
   width: calc(100% - 20px);
   background: #a6d5ff;
   display: flex;
-  flex-direction: column;
-
   border-left: 10px solid #1a0c0c;
   border-right: 10px solid #1a0c0c;
   @media only screen and (max-width: 768px) {
