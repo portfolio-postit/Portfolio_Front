@@ -24,7 +24,7 @@ export const ProjectLogo = styled.div`
   }
 `;
 
-export const Wrapper = styled.div`
+export const TopWrapper = styled.div`
   display: flex;
 `;
 

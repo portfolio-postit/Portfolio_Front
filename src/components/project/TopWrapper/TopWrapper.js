@@ -1,15 +1,14 @@
 import * as S from "./style";
-
-const ProjectLogo = () => {
+const TopWrapper = () => {
   return (
-    <S.Wrapper>
+    <S.TopWrapper>
       <S.ProjectLogo>
-        <p>PROJECT</p>
+        <p>ABOUT</p>
       </S.ProjectLogo>
       <S.HomeLogo>
         <p>HOME</p>
       </S.HomeLogo>
-    </S.Wrapper>
+    </S.TopWrapper>
   );
 };
-export default ProjectLogo;
+export default TopWrapper;
