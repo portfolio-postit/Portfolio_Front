@@ -3,3 +3,9 @@ export const MAIN = {
     return `/main/${email}`;
   },
 };
+
+export const ABOUT = {
+  GET_ABOUT: (email) => {
+    return `/about/${email}`;
+  },
+};
