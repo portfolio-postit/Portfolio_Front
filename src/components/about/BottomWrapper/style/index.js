@@ -19,7 +19,7 @@ export const Content = styled.div`
   margin-left: 3vw;
   margin-top: 2.5vw;
   display: flex;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 700;
   flex-direction: column;
 
