@@ -22,15 +22,19 @@ export const Content = styled.div`
   font-size: 2vw;
   font-weight: 700;
   flex-direction: column;
+
   div {
     margin-top: 1vw;
     &:after {
       content: "";
       display: block;
-      width: 35vw;
       border-bottom: 3px solid black;
+      width: 35vw;
       margin: 0.5vw auto;
       margin-top: 1.5vw;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-top: 2vw;
     }
   }
   div:nth-child(1) {
@@ -42,4 +46,9 @@ export const Image = styled.img`
   width: 18vw;
   margin-left: 8vw;
   margin-top: 5vw;
+  @media only screen and (max-width: 768px) {
+    height: 30vw;
+    margin-left: 12vw;
+    width: 27vw;
+  }
 `;
