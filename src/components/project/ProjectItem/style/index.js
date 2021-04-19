@@ -72,6 +72,7 @@ export const Progress = styled.progress`
     margin-bottom: 6px;
   }
 `;
+
 export const ProgressName = styled.div`
   margin-left: 3vw;
   height: 1.3vw;

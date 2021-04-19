@@ -23,29 +23,67 @@ const Wrapper = styled.div`
 `;
 
 const LeftWrapper = styled.div`
-  display: grid;
-  grid-template-rows: 3fr 1fr;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Image = styled.img`
   height: 20vw;
   width: 30vw;
   margin-left: 5vw;
-  margin-top: 2vw;
+  margin-top: 1vw;
 `;
 const Content = styled.div`
-  margin-top: 5vw;
+  height: 2vw;
+  margin-top: 7vw;
   font-size: 1.5vw;
   font-weight: 700;
   margin-left: 5vw;
 `;
 const Link = styled.a`
   margin-left: 6vw;
+  font-size: 1vw;
 `;
-
 const RightWrapper = styled.div`
   display: flex;
+  margin-left: 3vw;
+  margin-top: 1vw;
   flex-direction: column;
+`;
+const Essential = styled.div`
+  display: flex;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin-bottom: 1vw;
+`;
+const Free = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 1vw;
+  font-weight: 500;
+  margin-bottom: 1vw;
+  p {
+    margin-top: 0.5vw;
+  }
+  div {
+    font-size: 1.5vw;
+    font-weight: 700;
+  }
+`;
+const ProgressWrapper = styled.div`
+  display: flex;
+  p {
+    margin-top: 1vw;
+    font-size: 1vw;
+    font-weight: 500;
+  }
+`;
+const Progress = styled.progress`
+  margin-top: 0.5vw;
+  width: 30vw;
+  height: 2vw;
+  margin-left: 1.5vw;
+  margin-bottom: 1px;
 `;
 const ProjectModalForm = () => {
   return (
@@ -59,7 +97,43 @@ const ProjectModalForm = () => {
             https://github.com/Ahnyeongjun
           </Link>
         </LeftWrapper>
-        <RightWrapper></RightWrapper>
+        <RightWrapper>
+          <Essential>
+            <div>개발기간 : 2020 ~ 2020. (3개월)</div>
+          </Essential>
+          <Essential>
+            <div>개발인원 : 4명</div>
+          </Essential>
+          <Free>
+            <div>내용 및 특징</div>
+            <p>- ~~</p>
+            <p>- ~~</p>
+            <p>- ~~</p>
+          </Free>
+          <Free>
+            <div>개발 상황</div>
+            <ProgressWrapper>
+              <p>진행도</p>
+              <Progress value="20" max="100" />
+            </ProgressWrapper>
+            <ProgressWrapper>
+              <p>진행도</p>
+              <Progress value="20" max="100" />
+            </ProgressWrapper>
+          </Free>
+          <Free>
+            <div>기술 스택</div>
+            <p>- ~~</p>
+            <p>- ~~</p>
+            <p>- ~~</p>
+          </Free>
+          <Free>
+            <div>느낀점</div>
+            <p>- ~~</p>
+            <p>- ~~</p>
+            <p>- ~~</p>
+          </Free>
+        </RightWrapper>
       </Wrapper>
     </ModalForm>
   );
