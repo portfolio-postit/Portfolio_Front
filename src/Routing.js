@@ -13,10 +13,10 @@ const Routing = () => {
     <>
       <Switch>
         <Route path="/" exact component={DesktopRouting} />
+        <Route path="/skill" component={SkillContainer} />
         <Route path="/project" component={ProjectContainer} />
         <Route path="/home" component={HomeContainer} />
         <Route paht="/about" component={AboutContainer} />
-        <Route path="/skill" component={SkillContainer} />
         <Route component={NotFoundContainer} />
       </Switch>
       <ModalWrapperContainer />
