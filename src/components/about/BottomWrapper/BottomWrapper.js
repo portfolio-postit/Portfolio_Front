@@ -1,14 +1,16 @@
 import * as S from "./style";
-const BottomWrapper = () => {
+const BottomWrapper = (props) => {
+  console.log(props);
+
   return (
     <S.BottomWrapper>
-      <S.Image src="https://image.shutterstock.com/image-photo/competition-forest-trees-sunlight-necessary-260nw-1186179847.jpg" />
+      <S.Image src={process.env.REACT_APP_S3_URL + props.about.file_name} />
       <S.Content>
-        <div>안영준</div>
-        <div>이메일</div>
-        <div>깃허브</div>
-        <div>전화번호</div>
-        <div>학력</div>
+        <div>{props.about.username} Ahnyeongjun</div>
+        <div>이메일 {props.about.email} </div>
+        <div>깃허브 {props.about.git_url} </div>
+        <div>전화번호 {props.about.phone_number} </div>
+        <div>학력 대덕소프트웨어마이스터고등학교</div>
       </S.Content>
     </S.BottomWrapper>
   );
