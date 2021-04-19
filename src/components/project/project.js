@@ -1,11 +1,11 @@
 import * as S from "./style";
-import ProjectLogo from "./ProjectLogo/projectLogo";
+import Logo from "./ProjectLogo/projectLogo";
 import ProjectItem from "./ProjectItem/ProjectItem";
 
 const Project = () => {
   return (
     <S.Wrapper countProject="7">
-      <ProjectLogo />
+      <Logo />
       <S.ProjectList>
         <ProjectItem />
       </S.ProjectList>
