@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectLogo = styled.div`
-  height: 14.1vw;
+  height: 14.2vw;
   width: 32vw;
   background-image: url("projectTitle.png");
   background-repeat: no-repeat;
@@ -17,6 +17,31 @@ export const ProjectLogo = styled.div`
     width: 86vw;
     font-size: 7vw;
   }
+  p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+`;
+
+export const HomeLogo = styled.div`
+  height: 14.1vw;
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 23.4vw;
+  font-size: 3.5vw;
+  font-weight: 1000;
+  font-size: 3.5vw;
+  font-weight: 1000;
+  background-image: url("homeLogo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+
   p {
     display: table-cell;
     text-align: center;
