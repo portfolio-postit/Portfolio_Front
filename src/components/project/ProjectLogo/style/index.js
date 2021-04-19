@@ -41,10 +41,16 @@ export const HomeLogo = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   display: table;
-
+  @media only screen and (max-width: 768px) {
+    height: 0vw;
+    width: 0vw;
+  }
   p {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    @media only screen and (max-width: 768px) {
+      font-size: 0;
+    }
   }
 `;
