@@ -3,6 +3,7 @@ import About from "../../components/about/about";
 import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAboutSaga } from "../../modules/redux/about";
+import FooterContainer from "../footer/footerContainer";
 const AboutContainer = () => {
   const about = useSelector((state) => state.about);
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const AboutContainer = () => {
     <>
       <HeaderContainer />
       <About about={about} />
+      <FooterContainer />
     </>
   );
 };
