@@ -5,7 +5,7 @@ import { showModal } from "../../../modules/redux/modal";
 import React, { useCallback } from "react";
 import ProjectModal from "../../modal/Modal/ProjectModal/ProjectModal";
 
-const ProjectItem = () => {
+const ProjectItem = (props) => {
   const dispatch = useDispatch();
   const modalOn = useCallback(
     (modal) => {
@@ -19,7 +19,7 @@ const ProjectItem = () => {
         <S.ProjectGroup>
           <img src="springboot.png" />
           <S.ProjectCotent>
-            <S.ProjectTitle>springboot</S.ProjectTitle>
+            <S.ProjectTitle>{props.project.project_title}</S.ProjectTitle>
             <S.ProjectMember>member = 1</S.ProjectMember>
             <ProjectTag />
           </S.ProjectCotent>
