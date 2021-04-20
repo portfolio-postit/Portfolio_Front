@@ -18,23 +18,22 @@ const Question = () => {
     [questionForm]
   );
   const onClickSubmitBtn = async () => {
-    await requestPostApiWithBody(QUESTION.QUESTION(), {
-      email: questionForm.email,
-      content: questionForm.content,
-    }).then((res) => {
-      console.log(res.status);
-      switch (res.status) {
-        case 200: {
-          document.getElementById("email").value = "";
-          document.getElementById("content").value = "";
-
-          alert("성공");
+    if (questionForm.email == "" || questionForm.content == "") {
+      alert("값을 넣어주세요");
+    } else
+      await requestPostApiWithBody(QUESTION.QUESTION(), {
+        email: questionForm.email,
+        content: questionForm.content,
+      }).then((res) => {
+        console.log(res.status);
+        switch (res.status) {
+          case 200: {
+            document.getElementById("email").value = "";
+            document.getElementById("content").value = "";
+            alert("성공");
+          }
         }
-        case 403: {
-          alert("error");
-        }
-      }
-    });
+      });
   };
 
   return (
