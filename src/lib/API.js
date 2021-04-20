@@ -9,3 +9,9 @@ export const ABOUT = {
     return `/about/${email}`;
   },
 };
+
+export const QUESTION = {
+  QUESTION: () => {
+    return `/question`;
+  },
+};
