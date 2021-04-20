@@ -1,14 +1,22 @@
 import * as S from "./style";
 import ProjectItem from "./ProjectItem/ProjectItem";
 import TopWrapper from "./TopWrapper/TopWrapper";
-const Project = () => {
-  return (
-    <S.Wrapper countProject="7">
-      <TopWrapper />
-      <S.ProjectList>
-        <ProjectItem />
-      </S.ProjectList>
-    </S.Wrapper>
-  );
+const Project = (props) => {
+  const project = props.project.project;
+  let length = 0;
+  if (project != null) {
+    length = project.length;
+    return (
+      <S.Wrapper countProject={length}>
+        <TopWrapper />
+        <S.ProjectList>
+          {project.map((project) => (
+            <ProjectItem project={project} />
+          ))}
+        </S.ProjectList>
+      </S.Wrapper>
+    );
+  }
+  return <></>;
 };
 export default Project;
