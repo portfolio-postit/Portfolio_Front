@@ -15,3 +15,9 @@ export const QUESTION = {
     return `/question`;
   },
 };
+
+export const PROJECT = {
+  GET_PROJECT: (email) => {
+    return `/about/${email}`;
+  },
+};
