@@ -20,3 +20,17 @@ export const requestGetApi = async (url) => {
     throw err.response.status;
   }
 };
+
+export const requestPostApiWithBody = async (url, body) => {
+  try {
+    console.log(url);
+    const res = await axios.post(BASE_URL + url, body);
+    return res;
+  } catch (err) {
+    if (!err.response) {
+      alert("네트워크 상태를 확인해 주세요");
+      throw null;
+    }
+    throw err.response.status;
+  }
+};
