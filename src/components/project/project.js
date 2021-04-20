@@ -3,13 +3,11 @@ import ProjectItem from "./ProjectItem/ProjectItem";
 import TopWrapper from "./TopWrapper/TopWrapper";
 const Project = (props) => {
   const project = props.project.project;
-  let length = 0;
   if (project != null) {
-    length = project.length;
     return (
-      <S.Wrapper countProject={length}>
+      <S.Wrapper countProject={project.length}>
         <TopWrapper />
-        <S.ProjectList>
+        <S.ProjectList countProject={project.length}>
           {project.map((project) => (
             <ProjectItem project={project} />
           ))}
