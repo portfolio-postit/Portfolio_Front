@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProjectSaga } from "../../modules/redux/project";
 import HeaderContainer from "../header/headerContainer";
 import Project from "../../components/project/Project";
+import FooterContainer from "../footer/footerContainer";
 const ProjectContainer = () => {
   const project = useSelector((state) => state.project.project);
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const ProjectContainer = () => {
     <>
       <HeaderContainer />
       <Project project={project} />
+      <FooterContainer />
     </>
   );
 };
