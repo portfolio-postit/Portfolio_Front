@@ -18,6 +18,6 @@ export const QUESTION = {
 
 export const PROJECT = {
   GET_PROJECT: (email) => {
-    return `/about/${email}`;
+    return `/project/all/${email}`;
   },
 };
