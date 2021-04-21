@@ -25,7 +25,7 @@ export const Button = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("skillPostit.png");
-  margin-top: 2.5vw;
+  margin-top: 2vw;
   height: 11.3vw;
   width: 11vw;
 `;
@@ -36,4 +36,9 @@ export const Title = styled.div`
   margin-top: 1vw;
 `;
 
-export const Image = styled.div``;
+export const Image = styled.div`
+  height: 10vw;
+  width: 10vw;
+  margin-left: 0.5vw;
+  background: ${(props) => `no-repeat center/80% url(${props.img}) `};
+`;
