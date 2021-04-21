@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SKillPostit = styled.div`
+  text-align: center;
   display: flex;
   flex-direction: column;
   height: 10.7vw;
@@ -44,11 +45,8 @@ export const SKillPostit = styled.div`
   p {
     font-size: calc(1vw);
     font-weight: 500;
-    margin-left: calc(2vw);
     margin-top: 7%;
-    &.margin40 {
-      margin-left: 40%;
-    }
+
     &.framework {
       margin-left: 27%;
       @media only screen and (max-width: 768px) {
