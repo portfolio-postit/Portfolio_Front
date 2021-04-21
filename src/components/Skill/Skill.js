@@ -46,14 +46,14 @@ const Skill = () => {
             onClick("MOSTLANGUAGE");
           }}
         >
-          MOSTLANGUAGE
+          <S.Title>BACKEND</S.Title>
         </S.Button>
         <S.Button
           onClick={() => {
             onClick("SUBLANGUAGE");
           }}
         >
-          SUBLANGUAGE
+          <S.Title>FROTEND</S.Title>
         </S.Button>
 
         <S.Button
@@ -61,14 +61,14 @@ const Skill = () => {
             onClick("TOOL");
           }}
         >
-          TOOL
+          <S.Title>TOOL</S.Title>
         </S.Button>
         <S.Button
           onClick={() => {
             onClick("FRAMEWORK");
           }}
         >
-          FRAMEWORK
+          <S.Title>FRAMEWORK</S.Title>
         </S.Button>
       </S.RightWrapper>
     </S.Wrapper>
