@@ -21,3 +21,12 @@ export const PROJECT = {
     return `/project/all/${email}`;
   },
 };
+
+export const SKILL = {
+  GET_ALL_SKILL: (email) => {
+    return `/skill/${email}`;
+  },
+  GET_TYPE_SKILL: (email, type) => {
+    return `/skill/${email}/${type}`;
+  },
+};
