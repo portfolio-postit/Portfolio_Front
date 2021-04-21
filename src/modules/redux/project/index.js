@@ -1,6 +1,6 @@
-const SET_PROJECT = "main/SET_PROJECT";
+const SET_PROJECT = "project/SET_PROJECT";
 
-export const GET_PROJECT = "main/GET_PROJECT";
+export const GET_PROJECT = "project/GET_PROJECT";
 
 export const setProject = (payload) => ({
   type: SET_PROJECT,
@@ -15,7 +15,7 @@ const initialState = {
   project: [],
 };
 
-const MainReducer = (state = initialState, action) => {
+const ProjectReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_PROJECT: {
       return {
@@ -31,4 +31,4 @@ const MainReducer = (state = initialState, action) => {
   }
 };
 
-export default MainReducer;
+export default ProjectReducer;

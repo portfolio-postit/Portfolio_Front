@@ -1,4 +1,4 @@
-const SET_ABOUT = "main/SET_ABOUT";
+const SET_ABOUT = "about/SET_ABOUT";
 
 export const GET_ABOUT = "about/GET_ABOUT";
 
@@ -15,7 +15,7 @@ const initialState = {
   about: [],
 };
 
-const MainReducer = (state = initialState, action) => {
+const AboutReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ABOUT: {
       return {
@@ -31,4 +31,4 @@ const MainReducer = (state = initialState, action) => {
   }
 };
 
-export default MainReducer;
+export default AboutReducer;
