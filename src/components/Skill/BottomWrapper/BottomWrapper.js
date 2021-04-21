@@ -1,41 +1,32 @@
-import { useCallback, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { requestGetApi } from "../../../lib/REQUEST";
-import { call, put, takeEvery } from "redux-saga/effects";
-import { SKILL } from "../../../lib/API";
-import { getSkillSaga, updateSkill } from "../../../modules/redux/skill";
 import * as S from "./style";
 
-const BottomWrapper = () => {
-  const skill = useSelector((state) => state.skill);
+const BottomWrapper = (props) => {
+  const skill = props.skill.skill.response;
   console.log(skill);
-  const dispatch = useDispatch();
-
-  const initMainSaga = useCallback(() => {
-    dispatch(getSkillSaga());
-  }, [dispatch]);
-
-  useEffect(() => {
-    initMainSaga();
-  }, []);
-
-  const onClick = async () => {
-    await requestGetApi(
-      SKILL.GET_TYPE_SKILL("ahn479512@gmail.com", "MOSTLANGUAGE")
-    ).then((res) => {
-      dispatch(updateSkill(res.data));
-      switch (res.status) {
-        case 200: {
-          updateSkill(requestGetApi, res.data);
-        }
-      }
-    });
-  };
-  return (
-    <S.BottomWrapper>
-      <S.Title>MostLanguage</S.Title>
-      <button onClick={onClick}>a</button>
-    </S.BottomWrapper>
-  );
+  if (skill != null) {
+    let a = "";
+    a = skill.map((skill) => a + "  #" + skill.skill_name);
+    const b = skill.slice(0, 5);
+    console.log(b);
+    return (
+      <S.BottomWrapper>
+        <S.Board>
+          <S.Title>{props.skill.type}</S.Title>
+          <S.TagWrapper>{a}</S.TagWrapper>
+          {b.map((skill) => (
+            <S.ProjectItem>
+              <S.SkillName>{skill.skill_name}</S.SkillName>
+              <S.LeftProjectItem>
+                <S.Progress>
+                  <S.gauge skill={skill.skill_score || 100} />
+                </S.Progress>
+                <S.Percent>{skill.skill_score || 100} % </S.Percent>
+              </S.LeftProjectItem>
+            </S.ProjectItem>
+          ))}
+        </S.Board>
+      </S.BottomWrapper>
+    );
+  } else return <></>;
 };
 export default BottomWrapper;
