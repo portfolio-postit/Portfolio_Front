@@ -33,7 +33,7 @@ const Skill = () => {
       }
     );
   };
-
+  const { default: developerImg } = require("../../asset/skill/developer.svg");
   return (
     <S.Wrapper>
       <S.LeftWrapper>
@@ -43,32 +43,32 @@ const Skill = () => {
       <S.RightWrapper>
         <S.Button
           onClick={() => {
-            onClick("MOSTLANGUAGE");
+            onClick("Language");
           }}
         >
-          <S.Title>BACKEND</S.Title>
-        </S.Button>
-        <S.Button
-          onClick={() => {
-            onClick("SUBLANGUAGE");
-          }}
-        >
-          <S.Title>FROTEND</S.Title>
-        </S.Button>
-
-        <S.Button
-          onClick={() => {
-            onClick("TOOL");
-          }}
-        >
-          <S.Title>TOOL</S.Title>
+          <S.Title>Language</S.Title>
+          <S.Image img={developerImg}></S.Image>
         </S.Button>
         <S.Button
           onClick={() => {
             onClick("FRAMEWORK");
           }}
         >
-          <S.Title>FRAMEWORK</S.Title>
+          <S.Title>Framework</S.Title> <S.Image img={developerImg}></S.Image>
+        </S.Button>
+        <S.Button
+          onClick={() => {
+            onClick("TOOL");
+          }}
+        >
+          <S.Title>Tool</S.Title> <S.Image img={developerImg}></S.Image>
+        </S.Button>
+        <S.Button
+          onClick={() => {
+            onClick("ETC");
+          }}
+        >
+          <S.Title>ETC</S.Title> <S.Image img={developerImg}></S.Image>
         </S.Button>
       </S.RightWrapper>
     </S.Wrapper>
