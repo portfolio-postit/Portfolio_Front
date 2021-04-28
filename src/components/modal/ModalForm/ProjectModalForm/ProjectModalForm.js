@@ -14,13 +14,13 @@ const ProjectModalForm = (props) => {
           <S.Essential>
             <div>개발인원: {props.project.member}명</div>
           </S.Essential>
-          <S.Free>
+          <S.ContentWrapper>
             <div>내용 및 특징</div>
-            <p>- ~~</p>
-            <p>- ~~</p>
-            <p>- ~~</p>
-          </S.Free>
-          <S.Free>
+            {props.project.comment.map((comment) => (
+              <p>{comment}</p>
+            ))}
+          </S.ContentWrapper>
+          <S.SituationWrapper>
             <div>개발 상황</div>
             <S.ProgressWrapper>
               <p>진행도</p>
@@ -30,19 +30,21 @@ const ProjectModalForm = (props) => {
               <p>관여도</p>
               <S.Progress value={props.project.contribution} max="100" />
             </S.ProgressWrapper>
-          </S.Free>
-          <S.Free>
+          </S.SituationWrapper>
+          <S.ContentWrapper>
             <div>기술 스택</div>
-            <p>- ~~</p>
-            <p>- ~~</p>
-            <p>- ~~</p>
-          </S.Free>
-          <S.Free>
+            <S.ImageWrapper>
+              {props.project.skill.map((skill) => (
+                <img src={process.env.REACT_APP_S3_URL + skill.file_name} />
+              ))}
+            </S.ImageWrapper>
+          </S.ContentWrapper>
+          <S.ContentWrapper>
             <div>느낀점</div>
-            <p>- ~~</p>
-            <p>- ~~</p>
-            <p>- ~~</p>
-          </S.Free>
+            {props.project.realization.map((realization) => (
+              <p>{realization}</p>
+            ))}
+          </S.ContentWrapper>
         </S.RightWrapper>
       </S.Wrapper>
     </ModalForm>
