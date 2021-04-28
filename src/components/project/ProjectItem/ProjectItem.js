@@ -13,10 +13,9 @@ const ProjectItem = (props) => {
     },
     [dispatch]
   );
-  console.log(props);
   return (
     <>
-      <S.ProjectItem onClick={() => modalOn(ProjectModal)}>
+      <S.ProjectItem onClick={() => modalOn(ProjectModal(props.project))}>
         <S.ProjectGroup>
           <img src={process.env.REACT_APP_S3_URL + props.project.file_name} />
           <S.ProjectCotent>
