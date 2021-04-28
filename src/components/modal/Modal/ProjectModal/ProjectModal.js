@@ -3,11 +3,12 @@ import Modal from "../Modal";
 import ModalCloseBtn from "../../ModalCloseBtn/ModalCloseBtn";
 import ProjectModalForm from "../../ModalForm/ProjectModalForm/ProjectModalForm";
 
-const ProjectModal = () => {
+const ProjectModal = (props) => {
+  console.log(props);
   return (
     <Modal>
       <ModalCloseBtn />
-      <ProjectModalForm />
+      <ProjectModalForm project={props} />
     </Modal>
   );
 };
