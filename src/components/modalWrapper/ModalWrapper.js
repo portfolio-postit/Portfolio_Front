@@ -8,13 +8,7 @@ const ModalWrapper = (props) => {
   const { isShow, modalElement } = modalData;
   const Modal = modalElement;
 
-  return (
-    <>
-      {isShow && (
-        <S.Container onClick={ModalOff}>{Modal && <Modal />}</S.Container>
-      )}
-    </>
-  );
+  return <>{isShow && <S.Container onClick={ModalOff}>{Modal}</S.Container>}</>;
 };
 
 export default ModalWrapper;
