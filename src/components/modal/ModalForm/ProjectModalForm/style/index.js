@@ -23,7 +23,6 @@ export const Wrapper = styled.div`
 export const RightWrapper = styled.div`
   display: flex;
   margin-left: 3vw;
-  margin-top: 1vw;
   flex-direction: column;
 `;
 export const Essential = styled.div`
